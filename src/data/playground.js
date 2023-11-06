@@ -30,3 +30,5 @@ console.log(
     .map((item) => parseFloat(item.price.replace("$", "")))
     .reduce((prev, next) => prev + next)
 );
+
+console.log(Math.random() * 20);
