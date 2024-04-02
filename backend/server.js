@@ -8,14 +8,14 @@ const cors = require("cors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const port = 3000;
-require("dotenv");
+require("dotenv").config({ path: "../.env" });
 
 server.use(express.urlencoded({ extended: false }));
 server.use(express.json());
 server.use(cors());
-
+// console.log(process.env);
 mongoose
-  .connect(DB_URI)
+  .connect(process.env.DB_URI)
   .then((result) => {
     server.listen(port, () => {
       console.log(`Listening on ${port}...\nConnected to DB`);
