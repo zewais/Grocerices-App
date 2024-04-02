@@ -19,7 +19,7 @@ mongoose
   )
   .then((result) => {
     server.listen(port, () => {
-      console.log(`Lisening on ${port}...\nConnected to DB`);
+      console.log(`Listening on ${port}...\nConnected to DB`);
     });
   })
   .catch((error) => console.log(error));
